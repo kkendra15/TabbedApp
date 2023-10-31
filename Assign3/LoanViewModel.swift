@@ -27,10 +27,17 @@ class LoanViewModel: ObservableObject {
         }
         
         var monthlyPayment: Double
-        var totalPayments: Int
+        var temp: Double
+        var monthlyInterest = interestRate / 100.0 / 12.0
+        var totalPayments = loanLifetime * 12.0
         
         //compute monthly payment
-       // monthlyPayment =
+        temp = pow((1.0 + monthlyInterest), totalPayments)
+        monthlyPayment = Double(principle) * monthlyInterest * temp
+        temp = temp - 1.0
+        monthlyPayment = monthlyPayment / temp
+        
+        monthlyPaymentText = String(format:"%.2f", monthlyPayment)
         
     }
     
