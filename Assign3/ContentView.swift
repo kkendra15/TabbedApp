@@ -8,20 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
-    
-
-    
+ 
     var body: some View {
         TabView {
+            
             TempView()
                 .tabItem {
                     Label("Temperature", systemImage: "thermometer.medium")
                 }
+            
             LoanView()
                 .tabItem {
                     Label("Mortgage", systemImage: "house")
                 }
-            
         }
     }
 }

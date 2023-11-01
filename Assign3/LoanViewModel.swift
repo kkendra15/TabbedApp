@@ -37,7 +37,7 @@ class LoanViewModel: ObservableObject {
         temp = temp - 1.0
         monthlyPayment = monthlyPayment / temp
         
-        monthlyPaymentText = String(format:"%.2f", monthlyPayment)
+        monthlyPaymentText = String(format:"$%.2f", monthlyPayment)
         
     }
     

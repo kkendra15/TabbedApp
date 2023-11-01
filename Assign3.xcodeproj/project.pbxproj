@@ -14,6 +14,7 @@
 		2E9D69042AEC3F6800BCE635 /* TempView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9D69032AEC3F6800BCE635 /* TempView.swift */; };
 		2E9D69062AEC3F7B00BCE635 /* LoanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9D69052AEC3F7B00BCE635 /* LoanView.swift */; };
 		2EFC85762AF06F1100A57D0C /* LoanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFC85752AF06F1100A57D0C /* LoanViewModel.swift */; };
+		2EFC85782AF0A45E00A57D0C /* TempViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFC85772AF0A45E00A57D0C /* TempViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		2E9D69032AEC3F6800BCE635 /* TempView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempView.swift; sourceTree = "<group>"; };
 		2E9D69052AEC3F7B00BCE635 /* LoanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanView.swift; sourceTree = "<group>"; };
 		2EFC85752AF06F1100A57D0C /* LoanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanViewModel.swift; sourceTree = "<group>"; };
+		2EFC85772AF0A45E00A57D0C /* TempViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				2EFC85752AF06F1100A57D0C /* LoanViewModel.swift */,
 				2E9D69052AEC3F7B00BCE635 /* LoanView.swift */,
 				2E9D69032AEC3F6800BCE635 /* TempView.swift */,
+				2EFC85772AF0A45E00A57D0C /* TempViewModel.swift */,
 				2E9D68F92AEC2CAD00BCE635 /* Assets.xcassets */,
 				2E9D68FB2AEC2CAD00BCE635 /* Preview Content */,
 			);
@@ -150,6 +153,7 @@
 				2E9D69042AEC3F6800BCE635 /* TempView.swift in Sources */,
 				2E9D68F82AEC2CAA00BCE635 /* ContentView.swift in Sources */,
 				2E9D69062AEC3F7B00BCE635 /* LoanView.swift in Sources */,
+				2EFC85782AF0A45E00A57D0C /* TempViewModel.swift in Sources */,
 				2E9D68F62AEC2CAA00BCE635 /* Assign3App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
