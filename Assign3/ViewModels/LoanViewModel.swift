@@ -12,7 +12,7 @@ class LoanViewModel: ObservableObject {
     @Published var principleText = ""
     @Published var interestRate = 0.01
     @Published var loanLifetime = 0.0
-    @Published var monthlyPaymentText = "0.00"
+    @Published var monthlyPaymentText = "$0.00"
     
     @Published var errorMessage = ""
     @Published var showAlert = false
@@ -28,8 +28,8 @@ class LoanViewModel: ObservableObject {
         
         var monthlyPayment: Double
         var temp: Double
-        var monthlyInterest = interestRate / 100.0 / 12.0
-        var totalPayments = loanLifetime * 12.0
+        let monthlyInterest = interestRate / 100.0 / 12.0
+        let totalPayments = loanLifetime * 12.0
         
         //compute monthly payment
         temp = pow((1.0 + monthlyInterest), totalPayments)

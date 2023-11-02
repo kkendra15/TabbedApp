@@ -79,7 +79,7 @@ struct LoanView: View {
                 HStack {
                     Text("Monthly Payment")
                     Spacer()
-                    Text("$\(viewModel.monthlyPaymentText)")
+                    Text("\(viewModel.monthlyPaymentText)")
                 }
             } //end group
            

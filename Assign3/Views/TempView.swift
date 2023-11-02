@@ -10,7 +10,7 @@ import SwiftUI
 struct TempView: View {
     
     @StateObject private var viewModel = TempViewModel()
-    @State private var selectedTemp = 0
+ //   @State private var selectedTemp = 0
 
     var body: some View {
 
@@ -22,15 +22,17 @@ struct TempView: View {
                 .bold()
                 .padding(20)
            
-            
             Picker("Conversion Title", selection: $viewModel.conversionType) {
                 Text("\u{2109} \u{2B62} \u{2103}").tag(0) //F to C
                 Text("\u{2103} \u{2B62} \u{2109}").tag(1) //C to F
             }
             .pickerStyle(SegmentedPickerStyle())
             .padding(.vertical)
+            .onChange(of: viewModel.conversionType) { _ in    //change default value
+                viewModel.defaultTemp()
+            }
             
-            Picker("Temperature Selection", selection: $selectedTemp) {
+            Picker("Temperature Selection", selection: $viewModel.selectedTemp) {
                 ForEach(viewModel.temperatures[viewModel.conversionType], id: \.self) {
                     
                     //display farenheit wheel
@@ -39,18 +41,15 @@ struct TempView: View {
                     }
                     
                     //display celsius wheel
-                    else if viewModel.conversionType == 1 {
+                    else {
                         Text(String($0) + " \u{2103}")
                     }
                     
                 }
             }
             .pickerStyle(.wheel)
-            
-            //conversion result changed when different items selected in wheel
-//            .onChange(of: viewModel.selectedTemp) { tag in viewModel.convertTemp()}
-            .onChange(of: selectedTemp) { tag in
-                viewModel.convertTemp(selectedTemp: selectedTemp)
+            .onChange(of: viewModel.selectedTemp) { tag in    //change default value
+                viewModel.convertTemp(myTemp: tag)
             }
             Text("\(viewModel.convertedTempText)")
                

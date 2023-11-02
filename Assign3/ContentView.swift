@@ -14,12 +14,12 @@ struct ContentView: View {
             
             TempView()
                 .tabItem {
-                    Label("Temperature", systemImage: "thermometer.medium")
+                    Label("Temperature", image: "Temperature")
                 }
             
             LoanView()
                 .tabItem {
-                    Label("Mortgage", systemImage: "house")
+                    Label("Mortgage", image: "House")
                 }
         }
     }
